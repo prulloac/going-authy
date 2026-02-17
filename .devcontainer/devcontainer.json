@@ -9,27 +9,18 @@
             "installZsh": true,
             "configureZshAsDefaultShell": true,
             "installOhMyZsh": true,
-            "installOhMyZshConfig": true,
-            "upgradePackages": true,
-            "username": "automatic",
-            "userUid": "automatic",
-            "userGid": "automatic"
+            "installOhMyZshConfig": true
         },
-        "ghcr.io/devcontainers/features/git:1": {
-            "ppa": true,
-            "version": "latest"
-        },
-        "ghcr.io/devcontainers/features/github-cli:1": {
-            "installDirectlyFromGitHubRelease": true,
-            "version": "latest"
-        },
-        "ghcr.io/devcontainers/features/go:1": {
-            "version": "latest"
-        },
+        "ghcr.io/devcontainers/features/git:1": {},
+        "ghcr.io/devcontainers/features/github-cli:1": {},
+        "ghcr.io/devcontainers/features/go:1": {},
         "ghcr.io/devcontainers/features/docker-in-docker:2": {
-            "installDockerBuildx": true,
-            "version": "latest",
-            "dockerDashComposeVersion": "latest"
+            "moby": false,
+            "azureDnsAutoDetection": false
+        },
+        "ghcr.io/stu-bell/devcontainer-features/open-code:0": {},
+        "ghcr.io/devcontainers-extra/features/npm-package:1": {
+            "package": "skills"
         }
     },
     // Use 'postCreateCommand' to run commands after the container is created.
@@ -61,7 +52,10 @@
                 "ms-azuretools.vscode-docker",
                 "github.vscode-github-actions",
                 "DavidAnson.vscode-markdownlint",
-                "ms-vscode.makefile-tools"
+                "ms-vscode.makefile-tools",
+                "sst-dev.opencode",
+                "GitHub.copilot-chat",
+                "GitHub.vscode-pull-request-github"
             ]
         }
     }
